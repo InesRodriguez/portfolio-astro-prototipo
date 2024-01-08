@@ -1,0 +1,82 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import SocialPill from "../components/icons/SocialPill.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
+import CodeIcon from "../components/icons/Code.astro";
+import Projects from "../components/Projects.astro";
+---
+
+<Layout
+  title="Portfolio Inés Rodríguez - Desarrolladora front end"
+  description="Desarrolladora, programadora Angular semi senior"
+>
+  <main class="pb-6">
+    <SectionContainer class="py-15 pb-10">
+      <img
+        class="rounded-full size-12 mb-2"
+        src="https://avatars.githubusercontent.com/u/47326584?s=400&u=657b15c84f889660e2fc1ebeb95be016075ae50e&v=4"
+        alt="Ines Avatar"
+      />
+      <h1
+        class="text-white text-2xl lg:text-3xl font-bold flex flex-row gap-x-4 pb-4 lg:pb-10"
+      >
+        Hey, soy Inés Rodriguez
+        <div class="flex justify-center items-center w-55">
+          <a
+            href="https://www.linkedin.com/in/ines-alexandra-rr/"
+            target="_blank"
+          >
+            <Badge>Disponible para trabjar</Badge>
+          </a>
+        </div>
+      </h1>
+      <h2 class="text-xl lg:text-2xl tex-wrap max-w-[700px]">
+        <span> Más de 4 años de experiencia</span><span class="opacity-80">
+          Desarrolladora Front end.
+          <span class="text-yellow-200/60">
+            De Isla de Margarita, Venezuela.</span
+          >
+          <span class="opacity-60"
+            >Especializado en desarrollo de aplicaciones web modernas y
+            robustas.</span
+          >
+        </span>
+      </h2>
+      <nav class="flex gap-4 mt-8 flex-wrap">
+        <SocialPill href="https://www.linkedin.com/in/ines-alexandra-rr/">
+          <LinkedInIcon class="size-4 md:size-6" />
+          LinkenInd
+        </SocialPill>
+        <SocialPill href="https://github.com/InesRodriguez">
+          <GitHubIcon class="size-4 md:size-6" />
+          GitHub
+        </SocialPill>
+        <SocialPill href="mailto:iminesrodriguez@gmail.com">
+          <MailIcon class="size-4 md:size-6" />
+          iminesrodriguez@gmail.com
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+    <SectionContainer id="experiencia">
+      <h2 class="text-2xl font-semibold mb-4 mt-5 flex gap-x-2 items-center">
+        <Briefcase class="size-7" />
+        Experiencia laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
+    <SectionContainer id="proyectos">
+      <h2 class="text-2xl font-semibold mb-4 mt-5 flex gap-x-2 items-center">
+        <CodeIcon class="size-7" />
+        Proyectos
+      </h2>
+      <Projects/>
+    </SectionContainer>
+  </main>
+
+</Layout>

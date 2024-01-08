@@ -1,0 +1,41 @@
+---
+import NextJs from "../components/icons/NextJs.astro";
+const TAGS = {
+  NEXT: {
+    name: "Next.js",
+    class: " bg-black text-white",
+    icon: NextJs,
+  },
+};
+const PROJECTS = [
+  {
+    title: "Project 1",
+    description: "Hola mundo",
+    link: "#",
+    github: "#",
+    image: "/projects/ubuntu-22-10.webp",
+    tags: [TAGS.NEXT],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ title, description, tags, image }) => (
+    <article class="pl-8">
+      <h2 class="text-xl font-semibold text-yellow-100 mb-2">{title}</h2>
+      <p class="text-lg mb-2 text-pretty">{description}</p>
+      <ul class="flex gap-x-4 flex-row mb-2">
+        {tags.map((tag) => (
+          <li>
+            <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} px-2 py-1`}>
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
+          </li>
+          
+        ))}
+      </ul>
+      <img class="rounded shadow-2xl shadow-white/20" width="400" height="400" src={image} alt="Ejemplo" />
+    </article>
+  ))
+}
